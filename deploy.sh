@@ -8,10 +8,10 @@ git pull origin master
 # replace them  with the one in this repo
 
 #docker_containers=(datahub-staging-app datahub) #array
-docker_containers=(datahub-staging-app) #array
-for i in "${docker_containers[@]}"
+docker_containers="datahub-staging-app" #array
+for container in $docker_containers
 do
-  docker exec ${docker_containers[i]} rm -rf /src/public/pdf/** #remove pdf folder content
-  docker cp -a ~/pdf-print/** ${docker_containers[i]}:/src/public/pdf/ #copy into pdf folder
+  docker exec $container rm -rf /src/public/pdf/** #remove pdf folder content
+  docker cp -a ~/pdf-prints/** $container:/src/public/pdf/ #copy into pdf folder
+  echo "finished updating pdf folder for  $container"
 done
-
