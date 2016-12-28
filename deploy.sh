@@ -12,6 +12,6 @@ docker_containers="datahub-staging-app" #array
 for container in $docker_containers
 do
   docker exec $container rm -rf /src/public/pdf/** #remove pdf folder content
-  docker cp -a ~/pdf-prints/** $container:/src/public/pdf/ #copy into pdf folder
+  docker cp ~/pdf-prints/** $container:/src/public/pdf/ #copy into pdf folder
   echo "finished updating pdf folder for  $container"
 done
