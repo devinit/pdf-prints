@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # git update repo
-git pull origin master
+git pull origin master -q
 
+echo "finished updating pdf prints repo"
 # bash into the staging docker containers
 # remove the current pdf folders
 # replace them  with the one in this repo
