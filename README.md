@@ -1,6 +1,5 @@
 # pdf-prints
-To contain static pdfs currently stacked away in the datahub repo
 
-## GOAL
-- The pdfs currently hosted on the datahub website make the deploy process long due to their size.
-- Our Goal is to put them here and add them to the website in a separate deploy step to ensure faster and quick deploys
+Contains static pdfs which were previously stacked away in the datahub repo<br>
+
+These pdfs are available for download from the datahub website ``data.devinit.org/pdf/{pdf-directory}/{pdf-name}``
