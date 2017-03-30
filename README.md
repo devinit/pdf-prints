@@ -7,7 +7,7 @@ These pdfs are available for download from the datahub website ``data.devinit.or
 ## Uploading new PDF downloads
 
 Within the pdf narrative files eg [narrative_recipients.csv](https://github.com/devinit/datahub-angular/blob/master/public/diConcept/pages/Country/narrative_recipient.csv) you will find a row named pdf which is a date.
-The values with in that row mark the name of the folder with in which the pdf downloads for a particular country should go in this repository. Incase that folder doesnt exist please create it.
+The values with in that row mark the name of the folder with in which the pdf downloads for a particular country should go in this repository. Incase the folder doesnt exist please contact a dev to create it for you. 
 
 For the multilateral profiles, please put the pdf downloads in the multilaterals directory.
 
