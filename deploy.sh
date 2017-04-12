@@ -9,7 +9,7 @@ echo "finished updating pdf prints repo"
 # remove the current pdf folders
 # replace them  with the one in this repo
 
-docker_containers="datahub-staging-app datahub" #array
+docker_containers="datahub-staging-app datahub" #array of the docker containers we need to feed the pdfs into
 
 for container in $docker_containers
 do
