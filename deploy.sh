@@ -9,11 +9,11 @@ echo "finished updating pdf prints repo"
 # remove the current pdf folders
 # replace them  with the one in this repo
 
-docker_containers="datahub-staging-app datahub" #array of the docker containers we need to feed the pdfs into
+docker_containers="datahub-app" #array of the docker containers we need to feed the pdfs into
 
 for container in $docker_containers
 do
-  docker exec $container rm -rf /src/public/pdf #remove pdf folder content
+  #docker exec $container rm -rf /src/public/pdf #remove pdf folder content
   docker cp ~/pdf-prints $container:/src/public/pdf/ #copy into pdf folder
   echo "finished updating pdf folder for  $container"
   docker exec $container rm -rf /src/public/pdf/.git #remove git folder
