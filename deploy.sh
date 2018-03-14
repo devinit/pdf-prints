@@ -14,8 +14,8 @@ docker_containers="datahub-new" #array of the docker containers we need to feed 
 for container in $docker_containers
 do
   #docker exec $container rm -rf /src/public/pdf #remove pdf folder content
-  docker cp ~/pdf-prints $container:/static/pdf/ #copy into pdf folder
+  docker cp ~/pdf-prints $container:/src/static/pdf/ #copy into pdf folder
   echo "finished updating pdf folder for  $container"
-  docker exec $container rm -rf /static/pdf/.git #remove git folder
+  docker exec $container rm -rf /src/static/pdf/.git #remove git folder
   echo "removed pdf git folder in $container"
 done
